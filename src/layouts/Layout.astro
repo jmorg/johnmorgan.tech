@@ -26,5 +26,17 @@ const { title, description } = Astro.props;
   </head>
   <body>
     <slot />
+    <script is:inline>
+      console.log(
+        '%cjm@johnmorgan.tech%c ~ %c$ whoami',
+        'color:#58a6ff;font-family:monospace;font-weight:bold;',
+        'color:#5b6470;font-family:monospace;',
+        'color:#c9d1d9;font-family:monospace;',
+      );
+      console.log(
+        '%cSnooping around the console — respect. If you found a bug instead, I\'d actually love to hear about it: john5morgan29@gmail.com',
+        'color:#8b949e;font-family:monospace;font-size:12px;',
+      );
+    </script>
   </body>
 </html>
