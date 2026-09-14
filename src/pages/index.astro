@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+
+<Layout
+  title="John Morgan"
+  description="Engineering leader and fractional CTO — resume, projects, and engineering philosophy."
+>
+  <SiteHeader active="home" />
+
+  <main>
+    <section id="intro">
+      <p>
+        I build and lead engineering teams — most recently taking ManageXR's engineering org from
+        3 people to 14 as Head of Engineering, after four years on Google's Search Ranking team.
+        I care about shipping real things, keeping teams small and sharp, and treating security
+        and compliance as a design constraint rather than an afterthought.
+      </p>
+      <p>
+        I also do fractional CTO and engineering advisory work through
+        <a href="https://faebriel.com" target="_blank" rel="noopener">Faebriel</a>.
+      </p>
+    </section>
+
+    <section id="philosophy">
+      <span class="eyebrow">Philosophy</span>
+      <h2>How I think about engineering</h2>
+      <p>
+        Good software should feel like magic to the user and boring to maintain. Most of the risk
+        in a codebase isn't the hard problem you saw coming — it's the accumulation of small,
+        unowned decisions nobody revisited. I lead by staying close to the code, not above it:
+        the fastest way to set engineering standards is to demonstrate them in a diff.
+      </p>
+      <p>
+        I'm an early and vocal advocate for AI-native engineering — not as a novelty, but because
+        the teams that adopt it well ship faster without lowering their bar. At ManageXR I pushed
+        that adoption company-wide, from engineering workflows to customer support tooling.
+      </p>
+      <p class="read-more"><a href="/philosophy">Read the full philosophy &rarr;</a></p>
+    </section>
+
+    <section id="experience">
+      <span class="eyebrow">Experience</span>
+      <h2>Work &amp; education</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">ManageXR — Head of Engineering</span>
+          <span class="entry-meta">Oct 2021 – May 2026</span>
+        </div>
+        <p>
+          Grew the engineering and QA team from 3 to 14 while ARR grew 30x. Owned architecture,
+          hiring, and engineering standards; stayed hands-on across backend and Android. Led
+          security and compliance company-wide (SOC 2 Type II, ISO 27001) and worked directly
+          with enterprise customers and partners through the sales process.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Google — Senior Software Engineer, Tech Lead</span>
+          <span class="entry-meta">2017 – 2021</span>
+        </div>
+        <p>
+          Led technical direction for a critical Search Ranking backend component, improving
+          recall loss by 10%+ via large-scale ETL and feature engineering. Redesigned the deep
+          neural network in the critical serving path, cutting tail latency by 15ms. Built and
+          maintained testing infrastructure for a major infrastructure redesign.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Stanford University — B.S. Computer Science</span>
+          <span class="entry-meta">Class of 2017</span>
+        </div>
+        <p>
+          Human-Computer Interaction track. 1st place, CS Department Software Fair (disaster
+          response software). Debate Society captain, 2014–2016.
+        </p>
+      </div>
+
+      <p class="read-more">
+        <a href="/experience">See detailed experience &amp; project write-ups &rarr;</a>
+      </p>
+    </section>
+
+    <section id="consulting">
+      <span class="eyebrow">Consulting</span>
+      <h2>Fractional CTO &amp; advisory</h2>
+      <p>
+        I take on a small number of fractional CTO and engineering advisory engagements —
+        technical strategy, hands-on execution, security and enterprise readiness, and team
+        building for founder-led software companies.
+      </p>
+      <p class="read-more"><a href="/consulting">See consulting services &amp; how I can help &rarr;</a></p>
+    </section>
+
+    <section id="contact">
+      <span class="eyebrow">Contact</span>
+      <h2>Get in touch</h2>
+      <div class="links-row">
+        <a href="https://linkedin.com/in/jnmorgan5" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/john-at-faebriel" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:john5morgan29@gmail.com">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter showHobbies />
+</Layout>

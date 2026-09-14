@@ -1,0 +1,19 @@
+---
+interface Props {
+  showHobbies?: boolean;
+}
+
+const { showHobbies = false } = Astro.props;
+---
+
+<footer class="site-footer">
+  {
+    showHobbies && (
+      <p>
+        Off the clock: bass guitar (a handful of live shows a year), Brazilian Jiu-Jitsu (brown
+        belt), Magic: The Gathering, disc golf, 3D printing.
+      </p>
+    )
+  }
+  <p>&copy; {new Date().getFullYear()} John Morgan</p>
+</footer>

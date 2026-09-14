@@ -1,0 +1,20 @@
+---
+interface Props {
+  active?: 'home' | 'philosophy' | 'experience' | 'consulting';
+}
+
+const { active = 'home' } = Astro.props;
+---
+
+<header class="site-header">
+  <div>
+    <h1><a href="/">John Morgan</a></h1>
+    <p class="role-line">Engineering leader · fractional CTO</p>
+  </div>
+  <nav>
+    <a href="/philosophy" aria-current={active === 'philosophy' ? 'page' : undefined}>Philosophy</a>
+    <a href="/experience" aria-current={active === 'experience' ? 'page' : undefined}>Experience</a>
+    <a href="/consulting" aria-current={active === 'consulting' ? 'page' : undefined}>Consulting</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+</header>
