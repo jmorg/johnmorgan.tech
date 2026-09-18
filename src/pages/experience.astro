@@ -11,90 +11,114 @@ const projects = await Promise.all(
 ---
 
 <Layout
-  title="Experience — John Morgan"
+  title="Experience · John Morgan"
   description="Detailed work history and project write-ups for John Morgan."
 >
   <SiteHeader active="experience" />
 
   <main>
-    <a class="back-link" href="/">&larr; back home</a>
-    <span class="eyebrow">Detailed experience</span>
-    <h1 class="page-intro">Roles &amp; projects</h1>
-    <p>
-      The short version is on the <a href="/">homepage</a>. This is the longer version — what I
-      actually did, and why it mattered.
-    </p>
-
-    <section class="detail-block">
-      <h3>ManageXR — Head of Engineering (Oct 2021 – May 2026)</h3>
-      <p>
-        Joined as Lead Backend Engineer and grew into Head of Engineering, taking the team from 3
-        people to 15 while ARR grew 30x. Worked with product and go-to-market teams to architect,
-        implement, and manage all engineering work, and was heavily involved in defining product
-        and writing PRDs for new features.
-      </p>
-      <p>
-        Owned relationships with key hardware and software partners and worked closely with
-        Customer Success on triaging, debugging, prioritizing, and fixing customer issues.
-        Participated directly in the sales process and helped close large enterprise deals, both
-        as an engineer and as head of security.
-      </p>
-      <p>
-        Defined and demonstrated engineering standards company-wide — as a manager and lead, but
-        also through tactical individual-contributor work, implementing major backend and Android
-        systems and full-stack features to set the bar rather than just describe it.
+    <section>
+      <span class="eyebrow">Experience</span>
+      <h1>Roles &amp; projects</h1>
+      <p class="lead">
+        The <a href="/">homepage</a> has the short version. This page has more detail on each role
+        and a few projects.
       </p>
     </section>
 
-    <section class="detail-block">
-      <h3>Google — Senior Software Engineer, Tech Lead (2017 – 2021)</h3>
-      <p>
-        Managed technical direction for a critical component of the Search Ranking backend,
-        improving recall loss by more than 10% through large-scale ETL pipelines, feature
-        engineering, and compression and performance techniques — while helping other teams
-        implement similar projects.
-      </p>
-      <p>
-        Redesigned the deep neural network model in the critical serving path, improving tail
-        search latency by 15ms. Became the team's go-to on deep learning and led an internal AI
-        reading group. Built and maintained the testing infrastructure used to validate a major
-        infrastructure redesign, including coordinating on-call rotations around it.
-      </p>
-      <p>
-        Also shipped: a 20%-time project with the TensorFlow Object Detection team using CNNs to
-        detect and label tree species in major cities; ranking and retrieval work on Google Maps
-        Events that doubled CTR and DAU; and machine-learning-driven ranking signal improvements
-        for local search quality on Search and Maps.
-      </p>
-    </section>
+    <section>
+      <h2>Work &amp; education</h2>
 
-    <section class="detail-block">
-      <h3>Stanford University — B.S. Computer Science, HCI track (Class of 2017)</h3>
-      <p>
-        1st place, CS Department Software Fair 2017, for disaster response software. Member of the
-        Stanford Debate Society (2013–2017), Captain (2014–2016).
-      </p>
-    </section>
-
-    <span class="eyebrow">Projects</span>
-    <h2>Selected work, in depth</h2>
-
-    {
-      projects.map((project) => (
-        <div class="entry">
-          <div class="entry-head">
-            <span class="entry-title">{project.data.title}</span>
-            <span class="entry-meta">{project.data.period}</span>
-          </div>
-          <project.Content />
-          <ul class="stack-list">
-            {project.data.stack.map((tech: string) => (
-              <li>{tech}</li>
-            ))}
-          </ul>
+      <div class="entry">
+        <div class="entry-head">
+          <h3>ManageXR · Head of Engineering</h3>
+          <span class="entry-meta">Oct 2021 – May 2026</span>
         </div>
-      ))
-    }
+        <p>
+          Joined as Lead Backend Engineer and became Head of Engineering, growing the team from 3
+          people to 15 while ARR grew 30x. Worked with product and go-to-market teams to plan,
+          architect, and deliver all engineering work, and wrote PRDs for new features.
+        </p>
+        <p>
+          Built hiring, onboarding, and management practices from scratch. Owned relationships with
+          key hardware and software partners and worked with Customer Success to triage, debug,
+          prioritize, and fix customer issues. Joined enterprise sales cycles as both engineer and
+          head of security, and helped close large deals.
+        </p>
+        <p>
+          Set engineering standards by example as well as by management. I built major backend and
+          Android systems and full-stack features myself.
+        </p>
+        <ul class="stack-list">
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li>Android</li>
+          <li>Kotlin</li>
+          <li>GCP</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Google · Senior Software Engineer, Tech Lead</h3>
+          <span class="entry-meta">2017 – 2021</span>
+        </div>
+        <p>
+          Led technical direction for a critical component of the Search Ranking backend. Reduced
+          recall loss by more than 10% through large-scale ETL pipelines, feature engineering, and
+          compression and performance work, and helped other teams run similar projects.
+        </p>
+        <p>
+          Redesigned the deep neural network in the critical serving path, cutting tail search
+          latency by 15ms. Became the team's go-to person for deep learning and ran an internal AI
+          reading group. Built and maintained the testing infrastructure for a major infrastructure
+          redesign, including coordinating on-call around it.
+        </p>
+        <p>
+          Other work: ranking and retrieval for Google Maps Events that doubled CTR and DAU;
+          machine learning ranking signals for local search quality on Search and Maps; and a 20%
+          project with the TensorFlow Object Detection team using CNNs to identify tree species in
+          major cities from satellite and street-level imagery.
+        </p>
+        <ul class="stack-list">
+          <li>Machine Learning</li>
+          <li>TensorFlow</li>
+          <li>ETL</li>
+          <li>C++</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Stanford University · B.S. Computer Science</h3>
+          <span class="entry-meta">Class of 2017</span>
+        </div>
+        <p>
+          Human-Computer Interaction track. 1st place, CS Department Software Fair 2017, for
+          disaster response software. Stanford Debate Society member 2013–2017, captain 2014–2016.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      {
+        projects.map((project) => (
+          <div class="entry">
+            <div class="entry-head">
+              <h3>{project.data.title}</h3>
+              <span class="entry-meta">{project.data.period}</span>
+            </div>
+            <project.Content />
+            <ul class="stack-list">
+              {project.data.stack.map((tech: string) => (
+                <li>{tech}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </section>
   </main>
 
   <SiteFooter />

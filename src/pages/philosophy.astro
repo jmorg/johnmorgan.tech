@@ -5,114 +5,111 @@ import SiteFooter from '../components/SiteFooter.astro';
 ---
 
 <Layout
-  title="Philosophy — John Morgan"
-  description="John Morgan's engineering philosophy: problem solving, code review, agentic development, and how he leads teams."
+  title="Philosophy · John Morgan"
+  description="John Morgan's engineering philosophy: problem solving, code review, agentic development, and leadership."
 >
   <SiteHeader active="philosophy" />
 
   <main>
-    <a class="back-link" href="/">&larr; back home</a>
-    <span class="eyebrow">Philosophy</span>
-    <h1 class="page-intro">How I think about engineering</h1>
-    <p>
-      The short version is on the <a href="/">homepage</a>. This is the long version — the actual
-      operating principles, written down the way I've shared them with teams I've led.
-    </p>
-
-    <section class="detail-block">
-      <h3>Solve it yourself first, then escalate well</h3>
-      <p>
-        My default assumption when I hit a problem: I'm on my own until I've exhausted every
-        option available to me. That doesn't mean working in isolation — it means taking full
-        ownership of finding a solution before asking someone else to spend their time on it.
-      </p>
-      <p>
-        I learned this the hard way, working early in my career with a brilliant but very
-        time-constrained senior engineer. Getting a response from them took days unless the
-        question was sharp and clearly worth their limited time. So I got disciplined: understand
-        the problem deeply and write it down, enumerate every possible action before taking one,
-        weigh each by effort versus likelihood of success, work the list systematically, and only
-        escalate once I'd genuinely run out of road — arriving with what I'd tried, what I'd
-        learned, and a concrete ask.
-      </p>
-      <p>
-        This isn't about being a hero or suffering in silence. Production outages, hard blocks on
-        someone else's work, and genuine learning opportunities are all good reasons to break from
-        the process and ask immediately. The point is resourcefulness, not martyrdom — and when
-        you do ask, you make the conversation as short and effective as possible for the person
-        helping you.
+    <section>
+      <span class="eyebrow">Philosophy</span>
+      <h1>How I think about engineering</h1>
+      <p class="lead">
+        The <a href="/">homepage</a> has the short version. These are the working principles I've
+        shared with teams I've led.
       </p>
     </section>
 
-    <section class="detail-block">
-      <h3>Code review should make the team faster, not slower</h3>
+    <section>
+      <h2>Solve it yourself first, then escalate well</h2>
       <p>
-        Code review exists to improve long-term velocity, not to catch every bug or produce
-        perfect code. If it's making a team slower in the short term without paying that back
-        later, something about the process is broken. What actually pays off: socializing the
-        codebase so more people can work in any part of it, catching drift from agreed norms
-        before it compounds, and turning solo work into a shared understanding of the system.
+        When I hit a problem, I assume I'm on my own until I've tried everything available to me.
+        That doesn't mean working in isolation. It means I own the search for a solution before I
+        ask someone else to spend time on it.
       </p>
       <p>
-        In practice that means small PRs over big ones — review quality visibly drops once a
-        change is too large to hold in your head — and reviewing others' work before starting your
-        own, because a PR sitting in a queue is worse for the team than almost anything else. It
-        means using "nit:" and "out of scope:" prefixes so authors know what's actually blocking,
-        asking curious questions instead of making demands, and getting on a call after two rounds
-        of comment ping-pong instead of letting it drag on in a thread. And it means fixing
-        recurring nitpicks with a linter or a style guide entry instead of repeating them by hand
-        forever.
-      </p>
-    </section>
-
-    <section class="detail-block">
-      <h3>Building agentically</h3>
-      <p>
-        Coding agents crossed a real threshold — not just generating code, but taking a task from
-        plan to shipped change with minimal hand-holding. Teams that adapt their workflow around
-        that capability move meaningfully faster than teams that just use the tools as a faster
-        autocomplete. I've led that shift directly: introducing engineers to agentic tools,
-        pushing internal adoption through talks and pairing, and helping non-engineering teams
-        pick up the same tools for their own work.
+        I learned this early in my career, working with a brilliant senior engineer who had very
+        little time. Getting an answer from them took days unless the question was sharp and
+        clearly worth it. So I built a habit: understand the problem and write it down, list every
+        action I could take, rank them by effort and odds of success, work through the list, and
+        escalate only once I'd run out of options. When I did ask, I brought what I'd tried, what
+        I'd learned, and a specific question.
       </p>
       <p>
-        The unglamorous prerequisites matter more than the tools themselves. Agents need fast,
-        reliable tests so they can confirm their own changes work — without that, you have
-        AI-assisted programming, not agentic engineering. They need clear, tiered permissions for
-        what they can touch (local edits are fine to hand off freely; production access is not).
-        And they need living documentation that the team actually updates when something goes
-        wrong, the same discipline you'd expect around any other institutional knowledge — an
-        agent that repeats a mistake because nobody wrote down the fix is a process failure, not a
-        model failure.
-      </p>
-      <p>
-        Standardization compounds here more than usual. Agents — and the humans reviewing their
-        output — work best when every ticket, PR, and pattern in a codebase could have been
-        written by anyone. Two slightly different "good" ways of doing the same thing cost more
-        than committing to one, even when the other option was arguably a little better.
+        Some things are worth asking about right away: a production outage, a hard block on
+        someone else's work, or a real chance to learn from someone. The goal is resourcefulness.
+        When you do ask, keep it short and easy for the person helping you.
       </p>
     </section>
 
-    <section class="detail-block">
-      <h3>How I lead</h3>
+    <section>
+      <h2>Code review should make the team faster</h2>
       <p>
-        I try to be a hands-off manager by default: I'm here to help people think through hard
-        problems, clarify priorities, and give feedback — not to hand out step-by-step
-        instructions for work someone is equipped to figure out themselves. Ownership matters more
-        to me than process compliance. A ticket isn't done when it matches the spec; it's done
-        when the outcome the spec was trying to produce actually happens.
+        Code review exists to improve long-term velocity. It won't catch every bug or produce
+        perfect code, and if it slows a team down without paying that back later, the process is
+        broken. The payoff comes from spreading knowledge of the codebase so more people can work
+        anywhere in it, catching drift from agreed norms early, and turning solo work into a shared
+        understanding of the system.
+      </p>
+      <p>In practice:</p>
+      <ul>
+        <li>Keep PRs small. Review quality drops once a change is too big to hold in your head.</li>
+        <li>Review other people's PRs before starting your own work. A PR stuck in a queue slows everyone.</li>
+        <li>Prefix comments with "nit:" or "out of scope:" so authors know what's blocking.</li>
+        <li>Ask questions instead of making demands.</li>
+        <li>When the same nitpick keeps coming up, add a lint rule or a style guide entry.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Building agentically</h2>
+      <p>
+        Coding agents can now take a task from plan to shipped change with little hand-holding.
+        Teams that rework their process around that ship much faster than teams using agents as a
+        better autocomplete. I've led that shift: introducing engineers to agentic tools, pushing
+        adoption through talks and pairing, and helping non-engineering teams use the same tools
+        for their own work.
+      </p>
+      <p>The prerequisites matter more than the choice of tool:</p>
+      <ul>
+        <li>
+          Fast, reliable tests, so an agent can check its own changes. Without them, a person has
+          to verify every change by hand.
+        </li>
+        <li>
+          Tiered permissions. Local edits are fine to hand off freely. Production access is not.
+        </li>
+        <li>
+          Documentation the team updates when something goes wrong. If an agent repeats a mistake
+          because nobody wrote down the fix, that's a process failure.
+        </li>
+      </ul>
+      <p>
+        Standardization pays off more than usual. Agents, and the people reviewing their output,
+        work best when every ticket, PR, and pattern in a codebase looks like anyone could have
+        written it. Two slightly different good ways to do the same thing cost more than picking
+        one, even if the other was a little better.
+      </p>
+    </section>
+
+    <section>
+      <h2>How I lead</h2>
+      <p>
+        I default to hands-off management. My job is to help people think through hard problems,
+        set priorities, and give feedback. I don't hand out step-by-step instructions for work
+        someone can figure out. I care more about ownership than process: a ticket is done when it
+        produces the outcome the spec was written for, and matching the spec isn't enough.
       </p>
       <p>
-        I lean hard on writing things down and async communication — a doc that anyone can read
-        later beats a conversation that only the people in the room remember, and it usually
-        produces a better answer besides, since writing forces you to actually think the idea
-        through. If a disagreement will take more than a couple of back-and-forths in writing,
-        that's the signal to get on a call — but come prepared, so the call is short.
+        I write things down and default to async. A doc anyone can read later beats a conversation
+        only the people in the room remember, and writing forces you to think the idea through. If
+        a disagreement takes more than a couple of rounds in writing, get on a call, and come
+        prepared so the call is short.
       </p>
       <p>
-        And once a decision is made, the team commits to it together rather than each person
-        quietly running their own variant. A team that's 100% aligned on a good decision moves
-        faster than one that's split between two slightly-better ones.
+        Once we make a decision, the whole team commits to it and nobody quietly runs their own
+        variant. A team fully aligned on a good decision moves faster than one split between two
+        slightly better ones.
       </p>
     </section>
   </main>
