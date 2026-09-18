@@ -1,20 +1,23 @@
 ---
 interface Props {
-  active?: 'home' | 'philosophy' | 'experience' | 'consulting';
+  active?: 'home' | 'philosophy' | 'experience' | 'consulting' | 'contact';
 }
 
 const { active = 'home' } = Astro.props;
+
+// The name is the page's h1 only on the homepage; other pages have their own h1.
+const NameTag = active === 'home' ? 'h1' : 'p';
 ---
 
 <header class="site-header">
   <div>
-    <h1><a href="/">John Morgan</a></h1>
+    <NameTag class="site-name"><a href="/">John Morgan</a></NameTag>
     <p class="role-line">Engineering leader · Fractional CTO</p>
   </div>
   <nav>
     <a href="/philosophy" aria-current={active === 'philosophy' ? 'page' : undefined}>Philosophy</a>
     <a href="/experience" aria-current={active === 'experience' ? 'page' : undefined}>Experience</a>
     <a href="/consulting" aria-current={active === 'consulting' ? 'page' : undefined}>Consulting</a>
-    <a href="/#contact">Contact</a>
+    <a href="/contact" aria-current={active === 'contact' ? 'page' : undefined}>Contact</a>
   </nav>
 </header>

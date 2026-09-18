@@ -5,18 +5,15 @@ stack: [Claude Code, Agentic workflows, Process design, Tooling]
 order: 0
 ---
 
-Led ManageXR's shift to agentic software development — not just adopting AI coding tools, but
-rebuilding how the team plans, ships, and reviews work around them. Introduced engineers to Cursor
-and Claude Code, gave and pushed internal talks on AI-first development, and helped the business
-side adopt AI and MCP tooling for customer support and churn tracking.
+Led ManageXR's move to agentic software development, which meant changing how the team plans,
+ships, and reviews work. Introduced engineers to Cursor and Claude Code, gave internal talks on
+AI-first development, and helped the business side use AI and MCP tooling for customer support and
+churn tracking.
 
-The harder part wasn't the tools — it was the surrounding system. Getting agents to do meaningful
-end-to-end work meant investing in the unglamorous prerequisites: fast, reliable tests agents can
-run to confirm their own changes; clear sandboxing around what agents can touch (local edits vs.
-dev vs. anything resembling prod); living `AGENTS.md`-style documentation that the team actually
-updates after a session goes sideways, so lessons compound instead of repeating. Standardization
-mattered more than usual: agents work best when every ticket, PR, and pattern in the codebase looks
-like it could have been written by anyone.
+Most of the work was in the surrounding system. Getting agents to do real end-to-end work required
+fast, reliable tests they could run to check their own changes; clear limits on what they could
+touch (local edits, dev, anything close to prod); and `AGENTS.md`-style documentation the team
+updated after a session went wrong, so the same mistake didn't happen twice.
 
-Net effect: engineers routinely shipping in hours what used to take days, with QA — not agent
-capability — becoming the real bottleneck for the fastest-moving engineers.
+The result: engineers regularly shipped in hours what used to take days. For the fastest engineers,
+QA became the bottleneck instead of the agents.

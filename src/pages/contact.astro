@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+const links = [
+  { label: 'Email', text: 'john5morgan29@gmail.com', href: 'mailto:john5morgan29@gmail.com' },
+  { label: 'LinkedIn', text: 'linkedin.com/in/jnmorgan5', href: 'https://linkedin.com/in/jnmorgan5' },
+  { label: 'GitHub', text: 'github.com/john-at-faebriel', href: 'https://github.com/john-at-faebriel' },
+];
+---
+
+<Layout title="Contact · John Morgan" description="How to get in touch with John Morgan.">
+  <SiteHeader active="contact" />
+
+  <main>
+    <section>
+      <span class="eyebrow">Contact</span>
+      <h1>Get in touch</h1>
+      <p class="lead">
+        Email is the best way to reach me, whether it's about <a href="/consulting">consulting</a>,
+        a role, or something else.
+      </p>
+    </section>
+
+    <section>
+      <dl class="contact-list">
+        {
+          links.map((link) => (
+            <div>
+              <dt>{link.label}</dt>
+              <dd>
+                {link.href.startsWith('mailto:') ? (
+                  <a href={link.href}>{link.text}</a>
+                ) : (
+                  <a href={link.href} target="_blank" rel="noopener">
+                    {link.text}
+                  </a>
+                )}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+  </main>
+
+  <SiteFooter />
+</Layout>

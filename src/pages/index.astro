@@ -6,21 +6,24 @@ import SiteFooter from '../components/SiteFooter.astro';
 
 <Layout
   title="John Morgan"
-  description="Engineering leader and Fractional CTO — resume, projects, and engineering philosophy."
+  description="Engineering leader and Fractional CTO. Experience, projects, and engineering philosophy."
 >
   <SiteHeader active="home" />
 
   <main>
     <section id="intro">
-      <p>
-        I build and lead engineering teams — most recently taking ManageXR's engineering org from
-        3 people to 14 as Head of Engineering, after four years on Google's Search Ranking team.
-        I care about shipping real things, keeping teams small and sharp, and treating security
-        and compliance as a design constraint rather than an afterthought.
+      <p class="lead">
+        I build and lead engineering teams. Most recently I was Head of Engineering at ManageXR,
+        where the engineering org grew from 3 people to 15. Before that I spent four years on
+        Google's Search Ranking team. I like shipping real products with small teams, and I treat
+        security and compliance as a design constraint from day one.
       </p>
-      <p>
-        I also do Fractional CTO and engineering advisory work through
-        <a href="https://faebriel.com" target="_blank" rel="noopener">Faebriel</a>.
+      <p class="lead">
+        I also do Fractional CTO and engineering advisory work through <a
+          href="https://faebriel.com"
+          target="_blank"
+          rel="noopener">Faebriel</a
+        >.
       </p>
     </section>
 
@@ -29,14 +32,14 @@ import SiteFooter from '../components/SiteFooter.astro';
       <h2>How I think about engineering</h2>
       <p>
         Good software should feel like magic to the user and boring to maintain. Most of the risk
-        in a codebase isn't the hard problem you saw coming — it's the accumulation of small,
-        unowned decisions nobody revisited. I lead by staying close to the code, not above it:
-        the fastest way to set engineering standards is to demonstrate them in a diff.
+        in a codebase comes from small decisions nobody owned or revisited. The hard problems you
+        see coming tend to get handled. I lead from inside the code, because the fastest way to
+        set a standard is to show it in a diff.
       </p>
       <p>
-        I'm an early and vocal advocate for AI-native engineering — not as a novelty, but because
-        the teams that adopt it well ship faster without lowering their bar. At ManageXR I pushed
-        that adoption company-wide, from engineering workflows to customer support tooling.
+        I adopted AI-native engineering early and push for it, because teams that use it well
+        ship faster without lowering their bar. At ManageXR I drove adoption across the company,
+        from engineering workflows to customer support tooling.
       </p>
       <p class="read-more"><a href="/philosophy">Read the full philosophy &rarr;</a></p>
     </section>
@@ -47,65 +50,53 @@ import SiteFooter from '../components/SiteFooter.astro';
 
       <div class="entry">
         <div class="entry-head">
-          <span class="entry-title">ManageXR — Head of Engineering</span>
+          <h3>ManageXR · Head of Engineering</h3>
           <span class="entry-meta">Oct 2021 – May 2026</span>
         </div>
         <p>
-          Grew the engineering and QA team from 3 to 14 while ARR grew 30x. Owned architecture,
-          hiring, and engineering standards; stayed hands-on across backend and Android. Led
-          security and compliance company-wide (SOC 2 Type II, ISO 27001) and worked directly
-          with enterprise customers and partners through the sales process.
+          Grew the engineering and QA team from 3 to 15. Owned architecture, hiring, and
+          engineering standards, and stayed hands-on in backend and Android. Led
+          security and compliance for the company (SOC 2 Type II, ISO 27001) and worked with
+          enterprise customers and partners during sales.
         </p>
       </div>
 
       <div class="entry">
         <div class="entry-head">
-          <span class="entry-title">Google — Senior Software Engineer, Tech Lead</span>
+          <h3>Google · Senior Software Engineer, Tech Lead</h3>
           <span class="entry-meta">2017 – 2021</span>
         </div>
         <p>
-          Led technical direction for a critical Search Ranking backend component, improving
-          recall loss by 10%+ via large-scale ETL and feature engineering. Redesigned the deep
-          neural network in the critical serving path, cutting tail latency by 15ms. Built and
-          maintained testing infrastructure for a major infrastructure redesign.
+          Led technical direction for a critical Search Ranking backend component and reduced
+          recall loss by more than 10% with large-scale ETL and feature engineering. Redesigned the
+          deep neural network in the serving path, cutting tail latency by 15ms. Built the testing
+          infrastructure for a major infrastructure redesign.
         </p>
       </div>
 
       <div class="entry">
         <div class="entry-head">
-          <span class="entry-title">Stanford University — B.S. Computer Science</span>
+          <h3>Stanford University · B.S. Computer Science</h3>
           <span class="entry-meta">Class of 2017</span>
         </div>
         <p>
-          Human-Computer Interaction track. 1st place, CS Department Software Fair (disaster
-          response software). Debate Society captain, 2014–2016.
+          Human-Computer Interaction track. 1st place, CS Department Software Fair, for disaster
+          response software. Debate Society captain, 2014–2016.
         </p>
       </div>
 
-      <p class="read-more">
-        <a href="/experience">See detailed experience &amp; project write-ups &rarr;</a>
-      </p>
+      <p class="read-more"><a href="/experience">See full experience and projects &rarr;</a></p>
     </section>
 
     <section id="consulting">
       <span class="eyebrow">Consulting</span>
       <h2>Fractional CTO &amp; advisory</h2>
       <p>
-        I take on a small number of Fractional CTO and engineering advisory engagements —
-        technical strategy, hands-on execution, security and enterprise readiness, and team
-        building for founder-led software companies.
+        I take on a small number of Fractional CTO and advisory engagements with founder-led
+        software companies: technical strategy, hands-on execution, security and enterprise
+        readiness, and team building.
       </p>
-      <p class="read-more"><a href="/consulting">See consulting services &amp; how I can help &rarr;</a></p>
-    </section>
-
-    <section id="contact">
-      <span class="eyebrow">Contact</span>
-      <h2>Get in touch</h2>
-      <div class="links-row">
-        <a href="https://linkedin.com/in/jnmorgan5" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/john-at-faebriel" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:john5morgan29@gmail.com">Email</a>
-      </div>
+      <p class="read-more"><a href="/consulting">See consulting services &rarr;</a></p>
     </section>
   </main>
 
