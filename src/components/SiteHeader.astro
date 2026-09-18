@@ -1,6 +1,6 @@
 ---
 interface Props {
-  active?: 'home' | 'philosophy' | 'experience' | 'consulting';
+  active?: 'home' | 'philosophy' | 'experience' | 'consulting' | 'contact';
 }
 
 const { active = 'home' } = Astro.props;
@@ -18,6 +18,6 @@ const NameTag = active === 'home' ? 'h1' : 'p';
     <a href="/philosophy" aria-current={active === 'philosophy' ? 'page' : undefined}>Philosophy</a>
     <a href="/experience" aria-current={active === 'experience' ? 'page' : undefined}>Experience</a>
     <a href="/consulting" aria-current={active === 'consulting' ? 'page' : undefined}>Consulting</a>
-    <a href="/#contact">Contact</a>
+    <a href="/contact" aria-current={active === 'contact' ? 'page' : undefined}>Contact</a>
   </nav>
 </header>
