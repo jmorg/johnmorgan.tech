@@ -6,7 +6,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 
 <Layout
   title="Philosophy · John Morgan"
-  description="John Morgan's engineering philosophy: problem solving, code review, agentic development, and leadership."
+  description="John Morgan's engineering philosophy: communication, building the right thing, learning fast, and AI-native engineering."
 >
   <SiteHeader active="philosophy" />
 
@@ -15,101 +15,84 @@ import SiteFooter from '../components/SiteFooter.astro';
       <span class="eyebrow">Philosophy</span>
       <h1>How I think about engineering</h1>
       <p class="lead">
-        The <a href="/">homepage</a> has the short version. These are the working principles I've
-        shared with teams I've led.
+        The <a href="/">homepage</a> has the short version. These are the principles I've shared
+        with teams I've led.
       </p>
     </section>
 
     <section>
-      <h2>Solve it yourself first, then escalate well</h2>
+      <h2>Engineering is communication</h2>
       <p>
-        When I hit a problem, I assume I'm on my own until I've tried everything available to me.
-        That doesn't mean working in isolation. It means I own the search for a solution before I
-        ask someone else to spend time on it.
+        Excellent software engineering depends on excellent communication. I believe in writing
+        things down and in async cultures. A doc anyone can read later beats a conversation only
+        the people in the room remember, and writing forces you to think the idea through.
       </p>
       <p>
-        I learned this early in my career, working with a brilliant senior engineer who had very
-        little time. Getting an answer from them took days unless the question was sharp and
-        clearly worth it. So I built a habit: understand the problem and write it down, list every
-        action I could take, rank them by effort and odds of success, work through the list, and
-        escalate only once I'd run out of options. When I did ask, I brought what I'd tried, what
-        I'd learned, and a specific question.
-      </p>
-      <p>
-        Some things are worth asking about right away: a production outage, a hard block on
-        someone else's work, or a real chance to learn from someone. The goal is resourcefulness.
-        When you do ask, keep it short and easy for the person helping you.
+        This matters most for code. Someone will eventually need to know why a decision was made,
+        and "ask whoever wrote it" doesn't scale. The reasoning belongs in the PR, the design doc,
+        or a comment next to the code, where the next person can find it.
       </p>
     </section>
 
     <section>
-      <h2>Code review should make the team faster</h2>
+      <h2>Build the right thing</h2>
       <p>
-        Code review exists to improve long-term velocity. It won't catch every bug or produce
-        perfect code, and if it slows a team down without paying that back later, the process is
-        broken. The payoff comes from spreading knowledge of the codebase so more people can work
-        anywhere in it, catching drift from agreed norms early, and turning solo work into a shared
-        understanding of the system.
+        The hard part of engineering is usually deciding what to build. The most technically
+        complex solution is rarely the goal. Getting it right takes context: understanding what
+        is actually needed, how you'll maintain it, and how you'll explain your decisions to the
+        people who come after you.
       </p>
-      <p>In practice:</p>
-      <ul>
-        <li>Keep PRs small. Review quality drops once a change is too big to hold in your head.</li>
-        <li>Review other people's PRs before starting your own work. A PR stuck in a queue slows everyone.</li>
-        <li>Prefix comments with "nit:" or "out of scope:" so authors know what's blocking.</li>
-        <li>Ask questions instead of making demands.</li>
-        <li>When the same nitpick keeps coming up, add a lint rule or a style guide entry.</li>
-      </ul>
     </section>
 
     <section>
-      <h2>Building agentically</h2>
+      <h2>Learn fast, and learn from every attempt</h2>
       <p>
-        Coding agents can now take a task from plan to shipped change with little hand-holding.
-        Teams that rework their process around that ship much faster than teams using agents as a
-        better autocomplete. I've led that shift: introducing engineers to agentic tools, pushing
-        adoption through talks and pairing, and helping non-engineering teams use the same tools
+        The best engineers are the ones who are best at learning. The faster you learn, the
+        faster you improve and the more you can take on.
+      </p>
+      <p>
+        Learning fast depends on a good loop. More reps help, but I care more about getting as
+        much as possible out of each attempt: know what you're trying to find out, see the result
+        quickly, and understand why it came out that way before you try again.
+      </p>
+    </section>
+
+    <section>
+      <h2>Assume positive intent</h2>
+      <p>
+        I take people at their best. Part of my job is figuring out what each person is good at
+        and how to work well with them. People make mistakes, and that's expected. We're all
+        meatbags getting in the way of computers that would otherwise do exactly what we need.
+      </p>
+    </section>
+
+    <section>
+      <h2>Unblock yourself</h2>
+      <p>
+        Treat other people's time as expensive. I learned this early, working with a brilliant
+        senior engineer who only had time for questions that were sharp and clearly worth it.
+        When I'm stuck, I write the problem down, list what I could try, rank the options by
+        effort and odds of success, and work through them. When I do ask for help, I bring what I
+        tried, what I learned, and a specific question.
+      </p>
+      <p>
+        Some things deserve an immediate ask: a production outage, a hard block on someone else's
+        work, or a real chance to learn from someone.
+      </p>
+    </section>
+
+    <section>
+      <h2>AI-native engineering</h2>
+      <p>
+        The profession is changing, and learning to build with AI is part of the job now. At
+        ManageXR I pushed AI-native engineering across the company: introducing engineers to
+        agentic tools, giving talks, pairing, and helping non-engineering teams use the same tools
         for their own work.
       </p>
-      <p>The prerequisites matter more than the choice of tool:</p>
-      <ul>
-        <li>
-          Fast, reliable tests, so an agent can check its own changes. Without them, a person has
-          to verify every change by hand.
-        </li>
-        <li>
-          Tiered permissions. Local edits are fine to hand off freely. Production access is not.
-        </li>
-        <li>
-          Documentation the team updates when something goes wrong. If an agent repeats a mistake
-          because nobody wrote down the fix, that's a process failure.
-        </li>
-      </ul>
       <p>
-        Standardization pays off more than usual. Agents, and the people reviewing their output,
-        work best when every ticket, PR, and pattern in a codebase looks like anyone could have
-        written it. Two slightly different good ways to do the same thing cost more than picking
-        one, even if the other was a little better.
-      </p>
-    </section>
-
-    <section>
-      <h2>How I lead</h2>
-      <p>
-        I default to hands-off management. My job is to help people think through hard problems,
-        set priorities, and give feedback. I don't hand out step-by-step instructions for work
-        someone can figure out. I care more about ownership than process: a ticket is done when it
-        produces the outcome the spec was written for, and matching the spec isn't enough.
-      </p>
-      <p>
-        I write things down and default to async. A doc anyone can read later beats a conversation
-        only the people in the room remember, and writing forces you to think the idea through. If
-        a disagreement takes more than a couple of rounds in writing, get on a call, and come
-        prepared so the call is short.
-      </p>
-      <p>
-        Once we make a decision, the whole team commits to it and nobody quietly runs their own
-        variant. A team fully aligned on a good decision moves faster than one split between two
-        slightly better ones.
+        Agents need what people need, only more so: fast, reliable tests so they can check their
+        own work, clear limits on what they're allowed to touch, and documentation the team
+        updates when something goes wrong.
       </p>
     </section>
   </main>
