@@ -36,6 +36,8 @@
 
 html {
   color-scheme: dark;
+  /* Reserve scrollbar space so short pages like /contact don't shift horizontally */
+  scrollbar-gutter: stable;
 }
 
 body {
