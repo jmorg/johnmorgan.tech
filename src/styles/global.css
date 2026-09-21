@@ -305,7 +305,22 @@ main > section:first-child {
   text-decoration: none;
 }
 
+.headshot {
+  float: right;
+  width: 112px;
+  height: 112px;
+  margin: 0 0 var(--space-4) var(--space-6);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
 @media (max-width: 480px) {
+  .headshot {
+    width: 80px;
+    height: 80px;
+    margin-left: var(--space-4);
+  }
+
   body {
     font-size: 15px;
     padding: 0 var(--space-4);
