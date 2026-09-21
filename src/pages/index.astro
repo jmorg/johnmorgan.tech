@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { Image } from 'astro:assets';
+import headshot from '../assets/headshot.jpg';
 ---
 
 <Layout
@@ -12,6 +14,15 @@ import SiteFooter from '../components/SiteFooter.astro';
 
   <main>
     <section id="intro">
+      <Image
+        src={headshot}
+        alt="John Morgan"
+        class="headshot"
+        width={112}
+        height={112}
+        densities={[1, 2]}
+        loading="eager"
+      />
       <p class="lead">
         I build and lead engineering teams. Most recently I was Head of Engineering at ManageXR,
         where the engineering org grew from 3 people to 15. Before that I spent four years on
@@ -95,6 +106,7 @@ import SiteFooter from '../components/SiteFooter.astro';
         software companies: technical strategy, hands-on execution, security and enterprise
         readiness, and team building.
       </p>
+      <a class="cta" href="mailto:john5morgan29@gmail.com">Email me about an engagement &rarr;</a>
       <p class="read-more"><a href="/consulting">See consulting services &rarr;</a></p>
     </section>
   </main>
