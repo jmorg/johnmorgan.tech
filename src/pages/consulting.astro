@@ -2,116 +2,104 @@
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { CALENDAR_URL, EMAIL_URL } from '../data/links';
 
-const services = [
+const offers = [
   {
-    title: 'Fractional CTO & engineering leadership',
+    title: 'Fractional CTO',
     description:
-      'Technical strategy, architecture, engineering management, hiring, product planning, and security. I help founders turn business goals into an engineering plan.',
-    details: [
-      'Set technical direction and own the roadmap conversation with Product and GTM',
-      'Build the org: define roles, hire, structure teams, and add engineering managers as headcount grows',
-      'Own budget, vendor, and build-vs-buy decisions along with architecture',
-      'Represent engineering in fundraising and board conversations: diligence questions, technical vision, and credibility with investors',
-    ],
+      'Ongoing part-time technical leadership: architecture and roadmap decisions, running the engineering team, hiring, and being the technical voice with your investors and biggest customers.',
   },
   {
-    title: 'Security & enterprise readiness',
+    title: 'AI-native engineering audit',
     description:
-      'SOC 2, ISO 27001, security processes, enterprise requirements, and technical due diligence. I clear the technical blockers that show up when you start selling to larger companies.',
-    details: [
-      'Took ManageXR through SOC 2 Type II and ISO 27001 certification and annual re-certification',
-      'Build the audit and IT operations process that keeps compliance routine year to year',
-      'Join enterprise sales cycles as the technical and security counterpart when a deal needs one',
-      'Handle technical due diligence requests without pulling the rest of the team off their work',
-    ],
+      'I look at how your team actually builds today (tooling, workflow, code review, testing, deploys) and leave you with a concrete plan to get real leverage from Cursor, Claude Code and agentic workflows. Then I help you roll it out.',
   },
   {
-    title: 'Engineering team development',
+    title: 'Hiring and engineer assessments',
     description:
-      'Hiring, engineering practices, technical leadership, team structure, and developer tooling for a growing team.',
-    details: [
-      "Built the hiring and interviewing process that grew ManageXR's team from 3 to 15 engineers",
-      'Set code review and engineering standards that keep quality high without slowing down shipping',
-      'Coach engineers into tech leads and managers',
-      'Give a second opinion on hard architecture decisions your team is stuck on',
-      'Roll out modern tooling across a team, including agentic development workflows',
-    ],
+      'I design your engineering hiring loop and leveling, or run independent, evidence-based assessments of candidates and existing engineers through code review, live working sessions and a written rubric.',
+  },
+  {
+    title: 'Technical due diligence',
+    description:
+      "For investors and acquirers: a fast, independent read on a company's codebase, architecture, team and technical risk.",
+  },
+  {
+    title: 'SOC 2 readiness and engineering partnership',
+    description:
+      "When enterprise customers start asking for SOC 2, I partner with your team to get there without slowing product work: gap assessment, building the controls into how engineering already works, and support through the audit. I've taken a company through SOC 2 Type II and ISO 27001 certification and annual re-certification.",
   },
 ];
 ---
 
 <Layout
-  title="Consulting · John Morgan"
-  description="Fractional CTO and engineering advisory work with founders and small engineering teams."
+  title="Work with me · John Morgan"
+  description="Fractional CTO for founder-led software companies with 2 to 20 engineers: technical leadership, AI-native engineering, hiring, due diligence, and SOC 2 readiness."
 >
   <SiteHeader active="consulting" />
 
   <main>
     <section>
-      <span class="eyebrow">Consulting</span>
-      <h1>Fractional CTO &amp; engineering advisory</h1>
+      <span class="eyebrow">Fractional CTO &amp; advisory</span>
+      <h1>Work with me</h1>
       <p class="lead">
-        I work with founders and small engineering teams on the problems that show up as a company
-        grows: architecture, hiring, engineering management, security, technical strategy,
-        enterprise customers, and deciding what to build.
-      </p>
-      <a class="cta" href="mailto:john5morgan29@gmail.com">Email me &rarr;</a>
-    </section>
-
-    <section>
-      <h2>Background</h2>
-      <p>
-        I'm a software engineer in Chicago, currently building something new at <a
-          href="https://faebriel.com"
-          target="_blank"
-          rel="noopener">Faebriel</a
-        >.
-      </p>
-      <p>
-        Before that I ran engineering at ManageXR, reporting to the CEO. The team grew from 3 to 15
-        people. I owned technical deliverables, hiring, management, budget, architecture, and
-        security, and worked with Product and GTM on what we built and why. Before ManageXR I spent four years at Google on Search and Maps, working on
-        large-scale backend systems, machine learning, and search ranking.
-      </p>
-      <p>
-        I've always done both leadership and hands-on technical work. I set strategy and build the
-        org around it, and I still get into the code when a hard problem needs solving.
+        I work with founder-led software companies with 2 to 20 engineers that need senior
+        technical leadership but aren't ready for a full-time CTO or VP of Engineering.
       </p>
     </section>
 
     <section>
-      <h2>Who it's for</h2>
-      <p>
-        Founder-led software companies with small engineering teams that have outgrown informal
-        technical leadership but aren't ready to hire a full-time CTO or VP of Engineering. I do my
-        best work where the problems are still messy and the decisions matter.
-      </p>
-    </section>
-
-    <section>
-      <h2>Services</h2>
+      <h2>How I can help</h2>
       {
-        services.map((service) => (
+        offers.map((offer) => (
           <div class="entry">
             <div class="entry-head">
-              <h3>{service.title}</h3>
+              <h3>{offer.title}</h3>
             </div>
-            <p>{service.description}</p>
-            <ul>
-              {service.details.map((detail) => (
-                <li>{detail}</li>
-              ))}
-            </ul>
+            <p>{offer.description}</p>
           </div>
         ))
       }
     </section>
 
     <section>
-      <h2>Get in touch</h2>
-      <p>If this sounds like where your team is, send me an email.</p>
-      <a class="cta" href="mailto:john5morgan29@gmail.com">Email me &rarr;</a>
+      <h2>Case study</h2>
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Building an AI-native engineering org at ManageXR</h3>
+        </div>
+        {/* TODO: one or two sentences on the starting point */}
+        <p>
+          <strong>Problem:</strong> [TODO: one or two sentences on the starting point, e.g. a small team facing fast-growing
+          enterprise demand with process built for 3 people]
+        </p>
+        <p>
+          <strong>What I did:</strong> Grew the team from 3 to 15 engineers, designed the hiring
+          ladder and loop, set engineering standards, and led the shift to AI-first development with Cursor and
+          Claude Code, including tech talks and getting the support and business teams onto AI and
+          MCP tools.
+        </p>
+        {/* TODO: optional engineering metric; delete the placeholder if there isn't one */}
+        <p>
+          <strong>Result:</strong> ARR grew 30x over the period. [TODO: optional engineering metric
+          such as deploy frequency, cycle time or time to hire]
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>What people say</h2>
+      {/* TODO: one testimonial quote with name and title */}
+      <p>[TODO: one testimonial quote with name and title]</p>
+    </section>
+
+    <section>
+      <p>
+        If this sounds like your team, <a href={CALENDAR_URL}>book a 30-minute intro call</a> or <a
+          href={EMAIL_URL}>send me an email</a
+        >.
+      </p>
     </section>
   </main>
 

@@ -4,11 +4,12 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { Image } from 'astro:assets';
 import headshot from '../assets/headshot.jpg';
+import { CALENDAR_URL, EMAIL_URL } from '../data/links';
 ---
 
 <Layout
   title="John Morgan"
-  description="Engineering leader and Fractional CTO. Experience, projects, and engineering philosophy."
+  description="Fractional CTO for founder-led software teams. I help small engineering teams become AI-native teams that ship."
 >
   <SiteHeader active="home" />
 
@@ -23,19 +24,29 @@ import headshot from '../assets/headshot.jpg';
         densities={[1, 2]}
         loading="eager"
       />
+      <h1>Fractional CTO for founder-led software teams</h1>
       <p class="lead">
-        I build and lead engineering teams. Most recently I was Head of Engineering at ManageXR,
-        where the engineering org grew from 3 people to 15. Before that I spent four years on
-        Google's Search Ranking team. I like shipping real products with small teams, and I treat
-        security and compliance as a design constraint from day one.
+        I help small engineering teams become AI-native teams that ship, and I build the
+        engineering org around them as the company grows.
       </p>
-      <p class="lead">
-        Right now I'm building small products at <a
-          href="https://faebriel.com"
-          target="_blank"
-          rel="noopener">Faebriel</a
-        >. I also do <a href="/consulting">engineering advisory work</a>.
+      <p>
+        At ManageXR I took engineering from 3 to 15 engineers as Head of Engineering while ARR
+        grew 30x. Along the way I made it an AI-native team, defined how we hired and shipped, and
+        stayed hands-on in the code. Before that I spent four years on Google Search Ranking as a
+        Senior Software Engineer and Tech Lead.
       </p>
+      <p>
+        Now I work with founders part-time, as a fractional CTO or advisor, on the problems that
+        show up between "a few engineers" and "a real engineering org."
+      </p>
+      <a class="cta" href={CALENDAR_URL}>Book a 30-minute intro call &rarr;</a>
+      <p class="cta-alt"><a href={EMAIL_URL}>or email me</a></p>
+
+      <ul class="proof-strip">
+        <li><strong>3 &rarr; 15</strong> engineers built and led</li>
+        <li><strong>30x</strong> ARR growth as Head of Engineering</li>
+        <li><strong>Ex-Google</strong> Senior SWE / Tech Lead, Search Ranking</li>
+      </ul>
     </section>
 
     <section id="philosophy">
@@ -64,10 +75,10 @@ import headshot from '../assets/headshot.jpg';
           <span class="entry-meta">Oct 2021 – May 2026</span>
         </div>
         <p>
-          Grew the engineering and QA team from 3 to 15. Owned architecture, hiring, and
-          engineering standards, and stayed hands-on in backend and Android. Led
-          security and compliance for the company (SOC 2 Type II, ISO 27001) and worked with
-          enterprise customers and partners during sales.
+          Grew the team from 3 to 15 engineers while ARR grew 30x. Owned architecture, hiring,
+          and engineering standards, led the shift to AI-native development, and stayed hands-on
+          in backend and Android. Also led security and compliance for the company (SOC 2 Type II,
+          ISO 27001) and worked with enterprise customers and partners during sales.
         </p>
       </div>
 
@@ -99,15 +110,21 @@ import headshot from '../assets/headshot.jpg';
     </section>
 
     <section id="consulting">
-      <span class="eyebrow">Consulting</span>
+      <span class="eyebrow">Work with me</span>
       <h2>Fractional CTO &amp; advisory</h2>
       <p>
-        I take on a small number of Fractional CTO and advisory engagements with founder-led
-        software companies: technical strategy, hands-on execution, security and enterprise
-        readiness, and team building.
+        I work with founder-led software companies with 2 to 20 engineers that need senior
+        technical leadership but aren't ready for a full-time CTO or VP of Engineering.
       </p>
-      <a class="cta" href="mailto:john5morgan29@gmail.com">Email me about an engagement &rarr;</a>
-      <p class="read-more"><a href="/consulting">See consulting services &rarr;</a></p>
+      <p class="read-more"><a href="/consulting">See how I can help &rarr;</a></p>
+    </section>
+
+    <section>
+      <p>
+        I also build small products at <a href="https://faebriel.com" target="_blank" rel="noopener"
+          >Faebriel</a
+        >.
+      </p>
     </section>
   </main>
 

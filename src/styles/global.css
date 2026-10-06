@@ -307,6 +307,37 @@ main > section:first-child {
   text-decoration: none;
 }
 
+.cta-alt {
+  margin-top: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+/* Proof strip: three short stats under the homepage intro */
+
+.proof-strip {
+  clear: both;
+  list-style: none;
+  padding: 0;
+  margin-top: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.proof-strip li {
+  margin: 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: var(--text-sm);
+}
+
+.proof-strip strong {
+  display: block;
+  color: var(--fg);
+  font-size: var(--text-xl);
+}
+
 .headshot {
   float: right;
   width: 112px;
@@ -317,6 +348,10 @@ main > section:first-child {
 }
 
 @media (max-width: 480px) {
+  .proof-strip {
+    grid-template-columns: 1fr;
+  }
+
   .headshot {
     width: 80px;
     height: 80px;

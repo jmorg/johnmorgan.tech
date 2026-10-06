@@ -2,11 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import { CALENDAR_URL, EMAIL_ADDRESS, EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from '../data/links';
 
+// The TODO placeholders behind these links live in src/data/links.ts.
 const links = [
-  { label: 'Email', text: 'john5morgan29@gmail.com', href: 'mailto:john5morgan29@gmail.com' },
-  { label: 'LinkedIn', text: 'linkedin.com/in/jnmorgan5', href: 'https://linkedin.com/in/jnmorgan5' },
-  { label: 'GitHub', text: 'github.com/john-at-faebriel', href: 'https://github.com/john-at-faebriel' },
+  { label: 'Intro call', text: '[TODO: calendar link]', href: CALENDAR_URL, external: false },
+  { label: 'Email', text: EMAIL_ADDRESS, href: EMAIL_URL, external: false },
+  { label: 'LinkedIn', text: LINKEDIN_URL.replace('https://', ''), href: LINKEDIN_URL, external: true },
+  { label: 'GitHub', text: GITHUB_URL.replace('https://', ''), href: GITHUB_URL, external: true },
 ];
 ---
 
@@ -18,8 +21,8 @@ const links = [
       <span class="eyebrow">Contact</span>
       <h1>Get in touch</h1>
       <p class="lead">
-        Email is the best way to reach me, whether it's about <a href="/consulting">consulting</a>,
-        a role, or something else.
+        The best way to start is a 30-minute intro call. Or email me with a line about your team
+        and what's going on.
       </p>
     </section>
 
@@ -30,12 +33,12 @@ const links = [
             <div>
               <dt>{link.label}</dt>
               <dd>
-                {link.href.startsWith('mailto:') ? (
-                  <a href={link.href}>{link.text}</a>
-                ) : (
+                {link.external ? (
                   <a href={link.href} target="_blank" rel="noopener">
                     {link.text}
                   </a>
+                ) : (
+                  <a href={link.href}>{link.text}</a>
                 )}
               </dd>
             </div>
